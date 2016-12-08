@@ -1,12 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Advent of code 2016 1/12
 
 print ''
 print '***************************************************************************************'
 print '*                                                                                     *'
-print '*                              Advent of code 2016 7/12                               *'
+print '*                              Advent of code 2016 1/12                               *'
 print '*                             @MrInlumino - Anders Rosen                              *'
 print '*                                                                                     *'
 print '***************************************************************************************'

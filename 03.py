@@ -1,7 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Advent of code 2016 6/12
+print ''
+print '***************************************************************************************'
+print '*                                                                                     *'
+print '*                              Advent of code 2016 3/12                               *'
+print '*                             @MrInlumino - Anders Rosen                              *'
+print '*                                                                                     *'
+print '***************************************************************************************'
+print ''
 
 # Open input data file and read it into a string
 lines=[]
