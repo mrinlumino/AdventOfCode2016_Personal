@@ -32,25 +32,19 @@ for row in range(noOfRows):
 		column.append(0)
 	pixels.append(column)
 
-#print pixels
 
-
+# Iterate over all the instructions and execute the commands
 for instruction in lines:
-	print ''
-	print ('Instruction: % s') % (instruction)
+	# Is the instruction to light a rectangle of pixels?
 	if instruction[0:4] == 'rect':
-		#Create a rectangle of lit lights
-		#print 'Lighting rectange'
+		# Create a rectangle of lit lights
 		size = map(int,instruction[5:].split('x'))
 		for y in range(size[1]):
 			for x in range(size[0]):
 				pixels[y][x]=1
 
-
+	# Is the instruction to rotate a specified column down?
 	if instruction[:13] == 'rotate column':
-		for l in pixels: print l
-		#print 'Rotating column'
-		#print instruction[14:].split(' ')
 		col = int(instruction[14:].split(' ')[0][2:])
 		moves = int(instruction[14:].split(' ')[2])
 		for counter in range(moves):
@@ -60,29 +54,23 @@ for instruction in lines:
 				tempPixel = pixels[y][col]
 				pixels[y][col] = replacedPixel
 				replacedPixel = tempPixel
-		print ''
-		for l in pixels: print l
-		#raw_input("Press Enter to continue...")	
 
+
+	# Is the instruction to rotate a specified row to the right??
 	if instruction[0:10] == 'rotate row':
-		#print pixels
-
-#		print 'Rotating row'
+		# Extract the row number and number of moves
 		row = int(instruction[13:14])
 		moves = int(instruction[18:])
+		# Execute all moves, one at a time
 		for counter in range(moves):
-			#Shift the lights one column
+			# Shift the lights one column to the right
 			replacedPixel = pixels[row][49]
 			for x in range(50):
 				tempPixel = pixels[row][x]
 				pixels[row][x] = replacedPixel
 				replacedPixel = tempPixel
-				#print pixels[row]
-#		print pixels
-#		raw_input("Press Enter to continue...")	
 
-
-# count pixels
+# count the lit pixels
 noOfLitPixels = 0 
 for y in range(6): 
 	for x in range(50): 
