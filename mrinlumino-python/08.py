@@ -76,7 +76,28 @@ for y in range(6):
 	for x in range(50): 
 		noOfLitPixels += pixels[y][x]
 
-print ('Total number of lit pixels: %s') % noOfLitPixels
+print ('Challenge 1 - Total number of lit pixels: %s') % noOfLitPixels
+print ''
+
+# ****************************************** challenge 2 ****************************************** 
+
+# Prepare for printing
+printStrings = ['','','','','','']
+for y in range(6):
+	for x in range(50):
+		# Add a space after each char
+		if x % 5 == 0:
+			printStrings[y] += '  '
+		if pixels[y][x] == 0: 
+			printStrings[y] += ' '
+		else:
+			printStrings[y] += '*'
+
+
+# Print the resulting word
+print 'Challenge 2 resulted in the follwing word:'
+print ''
+for y in range(6): print printStrings[y]
 
 print ''
 print '***************************************************************************************'
