@@ -60,7 +60,7 @@ for line in lines:
 	# Add the key you ended up at to the final key code
 	keyCode = keyCode + str(activeKey)
 	
-print ('Key code: %s') % keyCode
+print ('Key code (challenge 1): %s') % keyCode
 
 
 # ****************************************** challenge 2 ****************************************** 

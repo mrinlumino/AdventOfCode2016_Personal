@@ -55,7 +55,7 @@ for move in route:
 		#Have we been here before?
 		currentPositionInText = ('%s : %s') % (lat,long)
 		if (IHaveReturned == 0) and (currentPositionInText in visitedLocations):
-			print ('Hey, I have been here (%s) before! . It is %s blocks away') % (currentPositionInText,abs(lat) + abs(long))
+			print ('Hey, I have been here (%s) before! It is %s blocks away') % (currentPositionInText,abs(lat) + abs(long))
 			IHaveReturned = 1
 		visitedLocations.append(currentPositionInText)
 
