@@ -10,8 +10,11 @@ print '*                                                                        
 print '***************************************************************************************'
 print ''
 
+print "Decoding ...."
+
 # Open input data file and read it into a string
 data=[]
+
 
 fo = open('04.data','r')
 for line in fo:
@@ -53,22 +56,29 @@ for room in data:
 	
 
 	for decodingChar in nameWithDashes:
+		# If the character is a dash, replace it with a space
 		if decodingChar == '-': 
 			decodedName += ' '
 		else:
+			# Repeate a specied numer of times, defines by the sector ID
 			for sectorCount in range(sectorID):
+				# If we ended up at the end of the alphabet, the restart
 				if decodingChar == 'z': 
 					decodingChar = 'a'
 				else:
+					# Change to the next letter in the alphabet
 					decodingChar = chr(ord(decodingChar)+1)
 			decodedName += decodingChar
 
+	# Have we found a correct room, the increase the count
 	if checkSumOK == 1:
 		sumOfSectorID += sectorID
-		print ('Decoded name: %s | Original name: %s | Checksum: %s | SectorID: %s | Cheksum OK: %s') % (decodedName, nameWithDashes, checksum, sectorID, checkSumOK)
+		# Have we found the north pole?
+		if decodedName.find('northpole') > -1:
+			print ('Challenge 2: Sector ID for Northpole storage room: %s') % (sectorID)
 
 
-print ('Sum of sectorID:s for correct room is: %s') % sumOfSectorID
+print ('Challenge 1: The sum of sectorID:s for correct rooms is: %s') % sumOfSectorID
 
 print ''
 print '***************************************************************************************'
