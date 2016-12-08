@@ -58,4 +58,7 @@ while codeString.find('*') > -1:
 
 print ('Identified code (challgenge 2): %s') % codeString
 
+print ''
+print '***************************************************************************************'
+print ''
 
