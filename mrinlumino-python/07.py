@@ -15,7 +15,7 @@ print ''
 
 # Open input data file and read it into a string
 lines=[]
-fo = open('07.txt','r')
+fo = open('07.data','r')
 for line in fo:
 	lines.append(line.replace('\n',''))
 fo.close()
@@ -57,7 +57,7 @@ for line in lines:
 	if isABBA == 1: 
 		noOfABBAs +=1
 
-print ('Total of TLS supported ips: %s') % noOfABBAs
+print ('Challenge 1 - Total of TLS supported ips: %s') % noOfABBAs
 
 
 # ****************************************** challenge 2 ****************************************** 
@@ -94,6 +94,9 @@ for orgline in lines:
 				noOfSSL += 1
 				identifiedSSL = 1
 
-print ('Total of SSL supported ips: %s') % noOfSSL
+print ('Challenge 2 - Total of SSL supported ips: %s') % noOfSSL
 
+print ''
+print '***************************************************************************************'
+print ''
 
