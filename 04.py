@@ -1,12 +1,19 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Advent of code 2016 4/12
+print ''
+print '***************************************************************************************'
+print '*                                                                                     *'
+print '*                              Advent of code 2016 4/12                               *'
+print '*                             @MrInlumino - Anders Rosen                              *'
+print '*                                                                                     *'
+print '***************************************************************************************'
+print ''
 
 # Open input data file and read it into a string
 data=[]
 
-fo = open('indata.txt','r')
+fo = open('04.data','r')
 for line in fo:
 	line = line.replace('\n','').strip(' ')
 	checksum = line[line.rfind('['):].strip('[').strip(']')
@@ -62,3 +69,7 @@ for room in data:
 
 
 print ('Sum of sectorID:s for correct room is: %s') % sumOfSectorID
+
+print ''
+print '***************************************************************************************'
+print ''

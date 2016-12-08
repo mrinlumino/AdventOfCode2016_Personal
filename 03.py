@@ -68,3 +68,6 @@ for counter in range(len(intLines)/3):
 
 print 'Number of possible triangles in case 2: %s' % str(noOfPossibleTriangles)
 
+print ''
+print '***************************************************************************************'
+print ''
