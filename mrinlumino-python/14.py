@@ -13,10 +13,13 @@ print ''
 
 import hashlib
 import re
-m = hashlib.md5()
+import time
+
+#m = hashlib.md5()
 
 
 # ****************************************** challenge 1 ****************************************** 
+print '********** Challenge 1 ************'
 
 puzzleInput = 'zpqevtbw'
 
@@ -67,6 +70,7 @@ print '********** Challenge 2 ************'
 
 puzzleInput = 'zpqevtbw'
 
+start = time.time()
 
 counter = 0	
 hitcounter = 0
@@ -84,13 +88,14 @@ while hitcounter < 64:
 	#if len(matches) > 0: print ('String: %s, Match: %s') % (mdFiveString, matches)
 	
 	if len(matches)>0:
-		#print ('Looking for %s') % match
+		now = time.time()
+		print ('Looking for %s on key nr: %s. Total executeion time: %s') % (matches[0], counter, int(now - start))
 		# Check the next 1000 hash strings for a sequal of five consecutive chars of the found type
 		for subCounter in range(1000):
 			subMdFiveString = hashlib.md5(puzzleInput + str(counter+subCounter + 1)).hexdigest()
 			for mdCount in range(2016):
-				subMdFiveString = 	hashlib.md5(subMdFiveString).hexdigest()
-			#print r'(%s)\1{4}' % match
+			 	subMdFiveString = 	hashlib.md5(subMdFiveString).hexdigest()
+			#print r'(%s)\1{4}' % matches[0]
 			subMatches = re.findall(r'(%s)\1{4}' % matches[0],subMdFiveString)
 			if len(subMatches) > 0:
 				hitcounter += 1
