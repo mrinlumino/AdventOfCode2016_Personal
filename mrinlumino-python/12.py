@@ -38,7 +38,6 @@ while executionPointer < len(instructions):
 
 	# Handle the copy instruction
 	if instruction[0] == 'cpy':
-		print 'Copy'
 		# Copy the coreesponding value into the right registry
 		try:
    			value = int(instruction[1])
@@ -56,7 +55,6 @@ while executionPointer < len(instructions):
 	# Handle the Jump if not zero intruction
 	increaseExecutionPointer = 1
 	if instruction[0] == 'jnz':
-		print 'jump'
 		if instruction[1] == 'a':
 			if a != 0: 
 				executionPointer += int(instruction[2])
@@ -83,7 +81,6 @@ while executionPointer < len(instructions):
 
 	# Handle the increase instruction
 	if instruction[0] == 'inc':
-		print 'increase'
 		if instruction[1] == 'a': a += 1
 		if instruction[1] == 'b': b += 1
 		if instruction[1] == 'c': c += 1
@@ -91,13 +88,10 @@ while executionPointer < len(instructions):
 
 	# Handle the decrese instruction
 	if instruction[0] == 'dec':
-		print 'decrease'
 		if instruction[1] == 'a': a += -1
 		if instruction[1] == 'b': b += -1
 		if instruction[1] == 'c': c += -1
 		if instruction[1] == 'd': d += -1
 
-#	print ('Result: Execution pointer= %s a=%s b=%s c=%s d=%s') % (executionPointer, a,b,c,d)
-#	raw_input("Press Enter to terminate.")
 print 'Challenge 1: Resulting value in registry A: %s' % a
 
