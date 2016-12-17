@@ -34,8 +34,6 @@ executionPointer = 0
 while executionPointer < len(instructions):
 	instruction = instructions[executionPointer].split(' ')
 
-	print instruction
-
 	# Handle the copy instruction
 	if instruction[0] == 'cpy':
 		# Copy the coreesponding value into the right registry
