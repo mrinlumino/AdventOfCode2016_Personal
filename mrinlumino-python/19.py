@@ -61,7 +61,7 @@ while len(elves) > 1:
 	if len(elves) % 10000 == 0: print len(elves) / 10000
 
 	# Calclulate the elf to be removed
-	removeElfNo = len(elves)//2 + 1
+	removeElfNo = len(elves)//2 + 1 + elfCounter
 	if removeElfNo > len(elves)-1: removeElfNo -= len(elves)
 
 	#Remove the elf
