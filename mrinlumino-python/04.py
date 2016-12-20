@@ -23,10 +23,7 @@ for line in fo:
 	lineWihtoutChecksum = line[0:line.rfind('[')]
 	sectorID = int(lineWihtoutChecksum[lineWihtoutChecksum.rfind('-')+1:])
 	ecnryptedName=lineWihtoutChecksum[0:lineWihtoutChecksum.rfind('-')]
-	#print ('%s : Name: %s | Checksum: %s | SectorID: %s') % (line, ecnryptedName, checksum, sectorID)
-	#print ecnryptedName
 	data.append([ecnryptedName,sectorID, checksum])
-	#lines.append(line.replace('\n','').strip(' '))
 fo.close()
 
 sumOfSectorID = 0

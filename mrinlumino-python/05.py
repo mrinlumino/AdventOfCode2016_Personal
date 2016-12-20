@@ -43,9 +43,6 @@ counter = 0
 print 'testing strings for challenge 2.....'
 while codeString.find('*') > -1:
 	puzzleInputWithNumbers = puzzleInput + str(counter)
-	#print puzzleInputWithNumbers
-	#m.update(puzzleInputWithNumbers)
-	#mdFiveString = m.hexdigest()
 	mdFiveString= hashlib.md5(puzzleInputWithNumbers).hexdigest()
 	if mdFiveString[0:5] == '00000':
 		if ord(mdFiveString[5]) in range(ord('0'),ord('8')):
