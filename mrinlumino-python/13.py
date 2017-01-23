@@ -121,6 +121,7 @@ print 'Challenge 1: Number of steps through the maze was: %s' % numberOfSteps
 
 
 # ****************************************** challenge 2 *****************
+# CURRENTLY NOT WORKING!
 print '\n********** Challenge 2 ************'
 
 NoOfValues = 0
