@@ -278,4 +278,4 @@ while executionPointer < len(instructions):
         executionPointer += 1
 
 
-print 'Challenge 1: Resulting value in registry A: %s' % a
+print 'Challenge 2: Resulting value in registry A: %s' % a
